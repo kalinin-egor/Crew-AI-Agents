@@ -1,15 +1,6 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env if present
-load_dotenv()
-
-# If the user provided the key explicitly, allow fallback via env var
-# Make sure OPENAI_API_KEY is available in the environment
-openai_api_key = os.getenv("OPENAI_API_KEY")
-if not openai_api_key:
-	raise RuntimeError("OPENAI_API_KEY is not set. Create .env or export the variable.")
-
 from langchain_openai import ChatOpenAI
 from crewai import Agent, Task, Crew
 
