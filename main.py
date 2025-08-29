@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from crewai import Agent, Task, Crew
 
+
 # Configure LLM
 llm = ChatOpenAI(
 	api_key=openai_api_key,
